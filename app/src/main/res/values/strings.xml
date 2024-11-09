@@ -10,4 +10,5 @@
     <string name="add_debtor">Add debtor</string>
     <string name="debtors_name">Debtor\'s name</string>
     <string name="rs_value">(R$) Value</string>
+    <string name="details">Details</string>
 </resources>

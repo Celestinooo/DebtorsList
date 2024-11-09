@@ -12,6 +12,7 @@ data class Debtors (
     var time: Long = INVALID_TIME,
     var name: String = "",
     var value: Double = 0.0,
+    var description: String = "",
     var done: Int = DEBTOR_UNPAID
 ): Parcelable {
     companion object {

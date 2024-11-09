@@ -20,6 +20,7 @@ class DebtorAdapter(
         RecyclerView.ViewHolder(tileDebtorBinding.root) {
         val nameTv: TextView = tileDebtorBinding.nameTv
         val valueTv: TextView = tileDebtorBinding.valueTv
+        val descriptionTv: TextView = tileDebtorBinding.descriptionTv
         val doneCb: CheckBox = tileDebtorBinding.doneCb
 
         init {
@@ -63,6 +64,7 @@ class DebtorAdapter(
             with(holder) {
                 nameTv.text = debtor.name
                 valueTv.text = "R$ ${debtor.value}"
+                descriptionTv.text = debtor.description
                 doneCb.isChecked = debtor.done == DEBTOR_PAID
             }
         }

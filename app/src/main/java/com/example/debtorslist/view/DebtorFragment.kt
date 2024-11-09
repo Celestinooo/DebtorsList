@@ -36,11 +36,13 @@ class DebtorFragment : Fragment() {
         receivedDebtor?.also { debtor ->
             with(ftb) {
                 nameEt.setText(debtor.name)
+                descriptionEt.setText(debtor.description)
                 valueEt.setText(debtor.value.toString())
                 doneCb.isChecked = debtor.done == DEBTOR_PAID
                 navigationArgs.editDebtor.also { editDebtor ->
                     nameEt.isEnabled = editDebtor
                     valueEt.isEnabled = editDebtor
+                    descriptionEt.isEnabled = editDebtor
                     doneCb.isEnabled = editDebtor
                     saveBt.visibility = if (editDebtor) VISIBLE else GONE
                 }
@@ -55,6 +57,7 @@ class DebtorFragment : Fragment() {
                             receivedDebtor?.time ?: System.currentTimeMillis(),
                             nameEt.text.toString(),
                             valueEt.text.toString().toDouble(),
+                            descriptionEt.text.toString(),
                             if (doneCb.isChecked) DEBTOR_PAID else DEBTOR_UNPAID
                         )
                     )
