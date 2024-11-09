@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.debtorslist.view.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_debtorFragment"
+            app:destination="@id/debtorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/debtorFragment"
+        android:name="com.example.debtorslist.view.DebtorFragment"
+        android:label="fragment_debtor"
+        tools:layout="@layout/fragment_debtor" >
+        <argument
+            android:name="debtor"
+            app:argType="com.example.debtorslist.model.entity.Debtors"
+            android:defaultValue="@null"
+            app:nullable="true" />
+        <argument
+            android:name="editDebtor"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+</navigation>
