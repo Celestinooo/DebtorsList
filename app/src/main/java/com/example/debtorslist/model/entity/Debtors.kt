@@ -8,8 +8,8 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 @Entity
 data class Debtors (
-    @PrimaryKey
     var time: Long = INVALID_TIME,
+    @PrimaryKey
     var name: String = "",
     var value: Double = 0.0,
     var description: String = "",
