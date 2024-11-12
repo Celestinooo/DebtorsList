@@ -8,7 +8,6 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 @Entity
 data class Debtors (
-    var time: Long = INVALID_TIME,
     @PrimaryKey
     var name: String = "",
     var value: Double = 0.0,
@@ -16,7 +15,6 @@ data class Debtors (
     var done: Int = DEBTOR_UNPAID
 ): Parcelable {
     companion object {
-        const val INVALID_TIME = -1L
         const val DEBTOR_PAID = 1
         const val DEBTOR_UNPAID = 0
     }

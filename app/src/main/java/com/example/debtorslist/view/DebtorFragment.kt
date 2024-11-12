@@ -54,7 +54,6 @@ class DebtorFragment : Fragment() {
                 setFragmentResult(DEBTOR_FRAGMENT_REQUEST_KEY, Bundle().apply {
                     putParcelable(
                         EXTRA_DEBTOR, Debtors(
-                            receivedDebtor?.time ?: System.currentTimeMillis(),
                             nameEt.text.toString(),
                             valueEt.text.toString().toDouble(),
                             descriptionEt.text.toString(),

@@ -61,7 +61,7 @@ class MainFragment : Fragment(), OnDebtorClickListener {
                     bundle.getParcelable(EXTRA_DEBTOR)
                 }
                 debtors?.also { receivedDebtor ->
-                    debtorsList.indexOfFirst { it.time == receivedDebtor.time }.also { position ->
+                    debtorsList.indexOfFirst { it.name == receivedDebtor.name }.also { position ->
                         if (position != -1) {
                             debtorViewModel.editDebtor(receivedDebtor)
                             debtorsList[position] = receivedDebtor
